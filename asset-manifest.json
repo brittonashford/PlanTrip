@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/plan-trip/static/css/main.48e3add5.css",
+    "main.js": "/plan-trip/static/js/main.c1a0a611.js",
+    "static/media/hero-image.jpg": "/plan-trip/static/media/hero-image.d98092293b09dcbd86c0.jpg",
+    "index.html": "/plan-trip/index.html",
+    "main.48e3add5.css.map": "/plan-trip/static/css/main.48e3add5.css.map",
+    "main.c1a0a611.js.map": "/plan-trip/static/js/main.c1a0a611.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48e3add5.css",
+    "static/js/main.c1a0a611.js"
+  ]
+}
