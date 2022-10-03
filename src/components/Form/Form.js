@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import Routes from "../Routes/Routes";
 import Directions from "../Directions/Directions";
 import Stops from "../Stops/Stops";
-
+import Departures from "../Departures/Departures";
 
 const Form = () => {
 
@@ -16,7 +16,8 @@ const Form = () => {
                 <Routes />
                 { selectedRoute && <Directions /> }
                 { selectedDirection && <Stops /> }
-            </div>            
+            </div>   
+            { selectedStop && <Departures />}         
         </>
     )
 }
