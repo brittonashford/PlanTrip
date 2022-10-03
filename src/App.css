@@ -1,38 +1,104 @@
+/***********************
+/*GENERAL
+/***********************/
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    text-align: center;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  h2{
+      font-size: 2rem ;
   }
-}
+  
+  body{
+      color: #626462;
+      font-weight: 400;
+      line-height: 1.5;
+  }
+  
+  *, *::before, *::after {
+      box-sizing: border-box;
+  }
+  
+  /***********************
+  /*HEADER
+  /***********************/
+  
+  
+  .header-container{   
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .header-icon{
+      margin: .1rem .5rem 0;
+  }
+  
+  .logo-text, .header-icon{
+      vertical-align: middle;
+      display:inline-block;
+  }
+  
+  .header-red{
+      color:rgba(193, 18, 31, .9);
+  }
+  
+  .header-blue{
+      color:rgba(0, 53, 102, .9);
+  }
+  
+  #hero-img{
+          width: 100vw;
+          position: relative;
+          margin-left: -50vw;
+          left: 50%;
+          overflow-x: hidden;
+          background-size: cover;
+      background-position: 90%;
+      background-repeat: no-repeat;
+  }
+  
+  #plan-trip-text{
+      position: absolute;
+      bottom: 45px;
+      padding: 2rem;
+      background: rgba(255, 255, 255, .9);
+      color: rgba(138, 139, 138, .9)
+  }
+  
+  #hero-container{
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  
+  
+  /***********************
+  /*FORM
+  /***********************/
+  .form-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      max-width: 570px;
+      margin: 0 auto 1rem auto;
+  }
+  
+  .form-select{
+      width: 100%;
+      height: 60px;
+      font-size: 1.4375rem !important;
+      color:#8a8b8a;
+      padding: 0.75rem;
+      margin: 0 auto 1rem auto;
+  }
