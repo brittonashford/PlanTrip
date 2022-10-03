@@ -12,7 +12,7 @@ const Form = () => {
     return(
         <>
             <div className="form-container wrap">
-                <h2>Real-time Departures</h2>
+                <h2 className="fade-in">Real-time Departures</h2>
                 <Routes />
                 { selectedRoute && <Directions /> }
                 { selectedDirection && <Stops /> }

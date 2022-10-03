@@ -4,10 +4,8 @@ import { AppContext } from "../../context/AppContext";
 
 const Routes = () => {
   const [routes, setRoutes] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const { setSelectedRoute, selectedRoute, selectedDirection } = useContext(AppContext);
-
-  console.log(`Routes.js-- route: ${selectedRoute} direction: ${selectedDirection}`);
+//   const [isLoading, setIsLoading] = useState(true);
+  const { setSelectedRoute } = useContext(AppContext);
 
   useEffect(() => {
     async function getRoutes() {
@@ -21,27 +19,23 @@ const Routes = () => {
         }
       } catch (error) {
         console.error(error);
-      } finally {
-        setIsLoading(false);
-      }
+      } 
+    //   finally {
+    //     setIsLoading(false);
+    //   }
     }
     getRoutes();
   }, []);
 
   const handleChange = (e) => {
-    console.log(e.target.value);
     setSelectedRoute(e.target.value)
   }
 
   return (
     <div>
-    {isLoading ? (
-        <h2>Loading...</h2>
-    ) 
-    : (
-      routes.length > 0 && (
+    {routes.length > 0 && (
         <>
-          <select name="route-select" class="form-select" id="route-select" onChange={handleChange}>
+          <select name="route-select" className="form-select" id="route-select" onChange={handleChange}>
             <option value="">Select route</option>
             {routes.map((route) => (
               <option key={route.route_id} value={route.route_id}>
@@ -51,7 +45,7 @@ const Routes = () => {
           </select>
         </>
       )
-    )}
+    }
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { AppContext } from "../../context/AppContext";
 
 const Departures = () => {
   const [departures, setDepartures] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+//   const [isLoading, setIsLoading] = useState(true);
   const [stopName, setStopName] = useState();
   const [stopNumber, setStopNumber] = useState();
   const { selectedRoute, selectedDirection, selectedStop } = useContext(AppContext);
@@ -18,8 +18,6 @@ const Departures = () => {
         );
 
         const departureList = await response.data.departures;
-        console.log(departureList);
-
 
         if (response.status === 200) {
             setDepartures(departureList);
@@ -29,9 +27,10 @@ const Departures = () => {
 
       } catch (error) {
         console.log("An error occurred.", error);
-      } finally {
-        setIsLoading(false);
-      }
+      } 
+    //   finally {
+    //     setIsLoading(false);
+    //   }
     }
 
     getDepartures(selectedRoute, selectedDirection, selectedStop);
@@ -40,11 +39,7 @@ const Departures = () => {
 
   return (
   <>
-    { isLoading ? (
-        <h2>Loading...</h2>
-    )
-    :
-    ( (departures.length > 0) ?
+    {departures.length > 0 ?
         (
         <div className="departure-container">
             <div id="stop-description">
@@ -65,7 +60,7 @@ const Departures = () => {
                     </thead> 
                     <tbody> 
                     {departures.map((departure) => (
-                        <tr className="departure">
+                        <tr key={departure.departure_time} className="departure">
                             <td className="route-number ">{departure.route_id}</td>
                             <td className="route-name">{departure.description}</td>
                             <td className="depart-time ">{departure.departure_text}</td>
@@ -80,7 +75,7 @@ const Departures = () => {
         (
             <h2>No departures available at this time.</h2>
         )
-    )}
+    }
   </>
   )
 }
