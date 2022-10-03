@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/PlanTrip/static/css/main.48e3add5.css",
-    "main.js": "/PlanTrip/static/js/main.76545a96.js",
+    "main.js": "/PlanTrip/static/js/main.8074bfe6.js",
     "static/media/hero-image.jpg": "/PlanTrip/static/media/hero-image.d98092293b09dcbd86c0.jpg",
     "index.html": "/PlanTrip/index.html",
     "main.48e3add5.css.map": "/PlanTrip/static/css/main.48e3add5.css.map",
-    "main.76545a96.js.map": "/PlanTrip/static/js/main.76545a96.js.map"
+    "main.8074bfe6.js.map": "/PlanTrip/static/js/main.8074bfe6.js.map"
   },
   "entrypoints": [
     "static/css/main.48e3add5.css",
-    "static/js/main.76545a96.js"
+    "static/js/main.8074bfe6.js"
   ]
 }
