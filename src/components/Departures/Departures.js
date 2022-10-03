@@ -73,7 +73,7 @@ const Departures = () => {
         )
         :
         (
-            <h2>No departures available at this time.</h2>
+            <h2>No upcoming departures for this stop at this time.</h2>
         )
     }
   </>
